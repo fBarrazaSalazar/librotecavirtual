@@ -1,0 +1,33 @@
+.producto{
+  width:350px;
+  height:350px;
+  margin:20px;
+  float:left;
+}
+
+.imgProducto {
+  width: 200px;
+  height: 200px;
+  float:left;
+}
+
+.button{
+  clear: both;
+  background-color: #1976d2;
+  display:flex;
+  border-radius:3px;
+  color:white;
+  border:none;
+}
+
+.precio{
+  color:red;
+}
+
+.titulo{
+  color:black;
+}
+
+.titulo:hover {
+  color:darkgreen;
+}

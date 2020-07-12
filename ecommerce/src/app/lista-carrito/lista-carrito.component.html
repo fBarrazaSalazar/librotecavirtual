@@ -1,0 +1,28 @@
+<h1>Productos seleccionados:</h1>
+<div *ngFor="let item of items">
+  <a routerLink='/productos/{{item.id_producto}}'>{{item.titulo}}</a> | {{item.precio}}
+  <!--<span><a routerLink="/"><i class="material-icons">delete</i></a></span>-->
+</div>
+
+<button class="button" (click)="LimpiarCarrito()">Vaciar Carrito</button>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+
+  <div>
+    <label for="nombre">
+      Nombre
+    </label>
+    <input id="nombre" type="text" formControlName="nombrecito">
+  </div>
+
+  <div>
+    <label for="correo">
+      Correo
+    </label>
+    <input id="correo" type="text" formControlName="email">
+  </div>
+
+  <button class="button" type="submit">Comprar</button>
+
+</form>
+

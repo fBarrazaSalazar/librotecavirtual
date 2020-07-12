@@ -1,0 +1,18 @@
+.titulo{
+  font-family:'Bauhaus 93';
+  color:yellow;
+}
+
+.seccion{
+  font-family:'Bauhaus 93';
+  color:black;
+}
+
+.seccion:hover {
+  font-family: 'Bauhaus 93';
+  color: white;
+}
+
+.carrito:hover{
+  color:white;
+}

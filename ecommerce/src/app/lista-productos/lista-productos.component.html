@@ -1,0 +1,12 @@
+
+<div class="producto" *ngFor="let producto of productos">
+  <a routerLink='/productos/{{producto.id_producto}}'><h2 class="titulo">{{producto.titulo}}</h2></a>
+  <img class="imgProducto" src="../assets/productos/{{producto.imagen}}" />
+  <p>Autor: {{producto.autor}}</p>
+  <p>País: {{producto.pais}}</p>
+  <p>Año: {{producto.anio}}</p>
+  <p>Editorial: {{producto.editorial}}</p>
+  <span class="precio"><strong>Precio:</strong> ${{producto.precio}}</span>
+  <button class="button" (click)="adicionarCarrito(producto)">Comprar</button>
+</div>
+

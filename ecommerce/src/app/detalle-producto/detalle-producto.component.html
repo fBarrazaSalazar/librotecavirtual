@@ -1,0 +1,84 @@
+<div class="producto">
+  <h2>{{producto.titulo}}</h2>
+  <img class="imgProducto" src="../assets/productos/{{producto.imagen}}" />
+  <p>Autor: {{producto.autor}}</p>
+  <p>Año: {{producto.anio}}</p>
+  <p>País: {{producto.pais}}</p>
+  <p>Editorial: {{producto.editorial}}</p>
+  <p>Reseña: {{producto.resena}}</p>
+  <br />
+  <p>Disponibles: {{producto.cantidad}}</p>
+  <span class="precio"><strong>Precio:</strong> ${{producto.precio}}</span>
+</div>
+
+
+
+<br />
+
+
+
+
+<div class="comentario">
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    <h3>Deja tu comentario! O si quieres solo puedes dejar una calificación al libro :)</h3>
+    <div>
+      <label for="nombre">
+        Nombre
+      </label>
+      <input id="nombre" type="text" formControlName="name">
+    </div>
+
+    <div>
+      <label for="email">
+        Correo
+      </label>
+      <input id="email" type="text" formControlName="mail">
+    </div>
+
+    <div>
+      <label for="comment">
+        Comentario
+      </label>
+      <input id="comment" type="text" formControlName="comentario">
+    </div>
+
+    <div class="clasificaciones">
+
+      <label for="calif">Su valoración:</label>
+
+      <div>
+        <input id="r1" type="radio" value="1" name="calificacion" formControlName="calificacion">
+        <label for="r1">1 - Mala</label>
+      </div>
+
+      <div>
+        <input id="r2" type="radio" value="2" name="calificacion" formControlName="calificacion">
+        <label for="r2">2 - Aceptable</label>
+      </div>
+
+      <div>
+        <input id="r3" type="radio" value="3" name="calificacion" formControlName="calificacion">
+        <label for="r3">3 - Muy buena!</label>
+      </div>
+
+
+    </div>
+
+    <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Comentar</button>
+
+  </form>
+</div>
+<br /><br />
+
+<br />
+
+<h1>Comentarios: </h1>
+
+<div class="comentarios" *ngFor="let com of comentarios">
+
+  <br />
+  <p>Nombre: {{com.nombre}}</p>
+  <p>Correo: {{com.email}}</p>
+  <p>Comentario: {{com.comentario}}</p>
+  <br />
+</div>

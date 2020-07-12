@@ -1,0 +1,11 @@
+.imgInicio{
+  width:60%;
+  height:60%;
+  display:block;
+  margin:auto;
+  background-color:black;
+}
+
+.texto{
+  text-align:center;
+}

@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\buscar",
+    "\\app\\contacto",
+    "\\app\\detalle-producto",
+    "\\app\\inicio",
+    "\\app\\lista-carrito",
+    "\\app\\lista-productos",
+    "\\app\\mejores"
+  ],
+  "SelectedNode": "\\app\\mejores\\mejores.component.ts",
+  "PreviewInSolutionExplorer": false
+}

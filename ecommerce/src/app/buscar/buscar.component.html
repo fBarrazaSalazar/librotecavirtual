@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+
+  <div>
+    <label for="titulo">
+      Buscar por título exacto:
+    </label>
+    <input id="titulo" type="text" formControlName="search">
+  </div>
+
+  <button class="button" type="submit">Buscar</button>
+
+</form>
+
+
+<div *ngFor="let producto of productos">
+  <a routerLink='/productos/{{producto.id_producto}}'><h2 class="titulo">{{producto.titulo}}</h2></a>
+</div>
